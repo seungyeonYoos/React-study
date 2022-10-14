@@ -1,0 +1,60 @@
+$one : #e8bfbf;
+$two : #ffe49b;
+$three: #a0d5e8;
+
+@mixin rect() { //자주쓸것같은거를 함수처럼 저장해놓기
+    width: 80px;
+    height: 80px;
+}
+@mixin move($move) { //자주쓸것같은거를 함수처럼 저장해놓기
+    left: 10px * $move; 
+    top: 10px * $move;
+}
+@keyframes first {
+    0% { 
+        @include move(0);
+     }
+    25% { 
+        @include move(1);
+     }
+    50% { 
+        @include move(1);
+     }
+    75% { 
+        @include move(1);
+     }
+    100% {
+        @include move(0);
+    }
+
+}
+
+.SassTest {
+    margin-top: 20px;
+    .box {
+        border-radius: 50%;
+        @include rect();
+        
+        &.first { //box랑 first가 동등 . . 같이 쓰게 될경우
+            background-color: $one;
+            animation-name: first;
+            animation-duration:2s;
+            animation-duration: leaner;
+            animation-iteration-count:10;
+            animation-direction:alternate;
+            animation-fill-mode: forwards;
+            
+        }
+        &.second {
+            background-color: $two;
+
+        }
+        &.third {
+            background-color: $three;
+
+        }
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+:root {
+    --color-red: red
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.one {
+    background-color: rgb(184, 219, 185);
+    top: 150px;
+    left: 150px;
+}
+.two {
+    background-color: rgb(115, 156, 117);
+    top: 200px;
+    left: 200px;
+}
+.three {
+    background-color: rgb(184, 219, 185);
+    top: 210px;
+    left: 250px;
+}
+.four {
+    background-color: rgb(115, 156, 117);
+    top: 250px;
+    left: 300px;
+}
+.five {
+    background-color: rgb(184, 219, 185);
+    top: 260px;
+    left: 360px;
+}
+.eyes {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    top: 160px;
+    left: 160px;
+}
+.eye {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    top: 161px;
+    left: 162px;
+}
