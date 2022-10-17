@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import TestComponent from './TestComponent';
-import RouterTest from './RouterTest';
+
 // import LifeCyclePractice from './LifeCyclePractice';
 import HookTest2 from './HookTest2';
 import "./App.scss";
+import { BrowserRouter } from "react-router-dom";
+import Nav from "./Nav";
+import Footer from "./Footer";
+import Content from './Content';
  
 class App extends Component {
-  state = {
-    value: true
-  }
+  // state = {
+  //   value: true
+  // }
 
   render() { 
     return (
@@ -26,9 +30,20 @@ class App extends Component {
       //   <div className='box second'></div>
       //   <div className='box third'></div>
       // </div>
+      // <BrowserRouter>
+      //   <Nav></Nav>
+      //   <Content></Content>
+      //   <Footer></Footer>
+
+      // </BrowserRouter>
       <>
-        <RouterTest></RouterTest>
+      <div className='SassTest'>
+        <div className='box first'></div>
+        <div className='box second'></div>
+        <div className='box third'></div>
+      </div>
       </>
+      
       
     );
     

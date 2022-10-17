@@ -18,10 +18,10 @@ $three: #a0d5e8;
         @include move(1);
      }
     50% { 
-        @include move(1);
+        @include move(2);
      }
     75% { 
-        @include move(1);
+        @include move(3);
      }
     100% {
         @include move(0);
@@ -36,22 +36,13 @@ $three: #a0d5e8;
         @include rect();
         
         &.first { //box랑 first가 동등 . . 같이 쓰게 될경우
-            background-color: $one;
-            animation-name: first;
-            animation-duration:2s;
-            animation-duration: leaner;
-            animation-iteration-count:10;
-            animation-direction:alternate;
-            animation-fill-mode: forwards;
-            
+            background-color: $one;            
         }
         &.second {
             background-color: $two;
-
         }
         &.third {
             background-color: $three;
-
         }
         &:hover {
             opacity: 0.3;
