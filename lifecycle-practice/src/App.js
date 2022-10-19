@@ -43,10 +43,7 @@ class App extends Component {
         <div className='box third'></div>
       </div>
       </>
-      
-      
     );
-    
   }
 }
  
