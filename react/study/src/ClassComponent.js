@@ -7,7 +7,7 @@ class ClassComponent extends Component {
         this.event
     }
     render() {
-        const { number } = this.state;
+        const { number } = this.state; 
         return(
             <>
                 <h3>Number: {number}</h3>
