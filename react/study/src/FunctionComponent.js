@@ -4,7 +4,7 @@ function FunctionComponent() {
 
     return(
         <>
-            <button onClick={this.printConsole}>퇴장</button>
+
         </>
     );
 }

@@ -1,26 +1,23 @@
 import { Component } from "react";
 
 class ClassComponent extends Component {
+    state = {
+        number: 0,
+    }
     constructor(props) {
         super(props);
 
-        this.event
+        this.event = this.event.bind(this);
     }
+    event() {
+        console.log( this );
+    }
+
     render() {
-        const { number } = this.state; 
+
         return(
             <>
-                <h3>Number: {number}</h3>
-                <button onClick={()=>{
-                    this.setState({ number: number + 1 });
-                }}>+1</button>
-                <button onClick={() => {
-                    this.setState(prev => {
-                        return {
-                            number: prev.number + 1
-                        };
-                    });
-                }}>2로 설정</button>
+                <button onClick={this.event}>버튼</button>
             </>
         )
     }
