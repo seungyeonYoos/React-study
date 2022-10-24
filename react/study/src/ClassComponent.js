@@ -10,7 +10,7 @@ class ClassComponent extends Component {
         this.event = this.event.bind(this);
     }
     event() {
-        console.log( this );
+        console.log( this ); 
     }
 
     render() {
