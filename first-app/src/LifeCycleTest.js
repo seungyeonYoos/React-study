@@ -27,7 +27,7 @@ class LifeCycleTest extends Component {
         var num = 0;
         this.time = setInterval(()=>{
             console.log("time:", num);
-            num++; //1초마다 하나씩 증가시키는 함수
+            num++; //1초마다 하나씩 증가시키는 함 수
         });
         
         
