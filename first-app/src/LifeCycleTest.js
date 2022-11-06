@@ -15,7 +15,7 @@ class LifeCycleTest extends Component {
  
     static getDerivedStateFromProps(nextProps, prevState) { //렌더하기 직전 static무조건 사용
         console.log(document.getElementById("pTag"));
-        console.log('getDerivedStateFromProps');
+        console.log('getDerivedStateFromProps'); 
  
         if(nextProps.color !== prevState.color) {
             return {color: nextProps.color};
@@ -23,7 +23,7 @@ class LifeCycleTest extends Component {
         return null;
     }
  
-    componentDidMount() { //렌더한 후
+    componentDidMount() { //렌더한후
         var num = 0;
         this.time = setInterval(()=>{
             console.log("time:", num);
