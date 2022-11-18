@@ -8,7 +8,7 @@ class LifeCycleTest extends Component {
  
     myRef = null; // ref를 설정할 부분
  
-    constructor(props) { 
+    constructor(props) { //props 설정 ? 
         super(props);
         console.log( 'constructor' );
     }
