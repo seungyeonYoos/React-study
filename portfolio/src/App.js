@@ -10,7 +10,7 @@ function Nav(){
         <oi>
           <li><a href='/read/1'>html</a></li>
           <li><a href='/read/2'>css</a></li>
-          <li><a href='/read/3'>js</a></li>
+          <li><a href='/read/3'>java</a></li>
         </oi>
       </nav>
 }
