@@ -1,40 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 
 function App() {
-  const [toDo, setToDo] = useState("");
-  const[toDos, setToDos] = useState([]);
-  const onChange = (event) => setToDo(event.target.value);
-  const onSubmit = (event) => {
-    event.preventDefault();
-    if (toDo === "") {
-      return;
-    }
-    setToDo("");
-    setToDos(currentArrey => [toDo, ...currentArrey]);
-  };
-  return (
-    <>
-    <h1>My To Dos({toDos.length})</h1>
-      <form onSubmit={onSubmit}>
-        <input onChange={onChange} 
-        value={toDo} 
-        type="text" 
-        placeholder='write your to do ...' 
-        />
-        <button>Add To Do</button>
-      </form>
-      <hr />
-      <ul>
-        {toDos.map((item, index)=> 
-        <li key={index}>{item}</li>
-        )}
-      </ul>
-      
-      
-    </>
-  );
+  const [loading, setLoading] = useState(true);
+  const [] = useState();
+  useEffect(() => {
+    fetch(
+      `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
+    ).then((Response) => Response.json()).then(json => console.log(json));
+  }, []);
+  return <>
+    <div>{loading ? <h1>Loading...</h1> : null}</div>
+  </>;
 }
 
 export default App;
