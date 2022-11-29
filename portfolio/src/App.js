@@ -14,10 +14,9 @@ function App() {
     setToDo("");
     setToDos(currentArrey => [toDo, ...currentArrey]);
   };
-  console.log(toDos);
   return (
     <>
-    <h1>My To Dos</h1>
+    <h1>My To Dos({toDos.length})</h1>
       <form onSubmit={onSubmit}>
         <input onChange={onChange} 
         value={toDo} 
@@ -26,6 +25,13 @@ function App() {
         />
         <button>Add To Do</button>
       </form>
+      <hr />
+      <ul>
+        {toDos.map((item, index)=> 
+        <li key={index}>{item}</li>
+        )}
+      </ul>
+      
       
     </>
   );
