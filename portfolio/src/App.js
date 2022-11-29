@@ -1,32 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-function Header(){
-  return <header>
-  <h1><a href='#'>WEB</a></h1>
-</header>
-}
-function Nav(){
-  return <nav>
-        <oi>
-          <li><a href='/read/1'>html</a></li>
-          <li><a href='/read/2'>css</a></li>
-          <li><a href='/read/3'>java</a></li>
-        </oi>
-      </nav>
-}
-function Article(){
-  return <article>
-  <h2>Welcome</h2>
-  Hello, WEB
-</article>
-}
+import { useState } from 'react';
 
 function App() {
+  const [toDo, setToDo] = useState("");
+  const onChange = (event) => setToDo(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (toDo === "") {
+      return;
+    }
+    setToDo("");
+  }
   return (
     <>
-      <Header></Header>
-      <Nav></Nav>
-      <Article></Article>
+      <form onSubmit={onSubmit}>
+        <input onChange={onChange} 
+        value={toDo} 
+        type="text" 
+        placeholder='write your to do ...' 
+        />
+        <button>Add To Do</button>
+      </form>
+      
     </>
   );
 }
