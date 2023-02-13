@@ -16,7 +16,7 @@ export function Box2(){
     return(
         <>
         <div>
-            <h2>box2</h2>
+            <h2>box2 컨테이너</h2>
             <Box3Container></Box3Container>
         </div>
         </>
