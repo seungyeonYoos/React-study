@@ -1,18 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import { Component } from 'react';
-import ClassComponent from './ClassComponent';
-import FunctionComponent from './FunctionComponent';
 
-class App extends Component{
-  render() {
-    return(
-      <>
-        <ClassComponent></ClassComponent>
-        <FunctionComponent></FunctionComponent>
-      </>
-    );
-  }
+function App() {
+
+  let post = '강남 우동 맛집';
+
+  return(
+    <div className="App">
+      <div className="black-nav">
+        <h4>블로그</h4>
+      </div>
+      <h4 style={ {color : 'red', fontSize : '20px'} }>{ post }</h4>
+    </div>
+  );
 }
 
 export default App;
