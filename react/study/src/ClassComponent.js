@@ -17,7 +17,7 @@ class ClassComponent extends Component {
 
         return(
             <>
-                <button onClick={this.event}>버튼</button>
+                <button onClick={this.event}>button</button>
             </>
         )
     }
