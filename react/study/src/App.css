@@ -13,3 +13,6 @@ div {
   text-align: left;
   border-bottom: 1px solid gray;
 }
+.d-none {
+  display: none;
+}
