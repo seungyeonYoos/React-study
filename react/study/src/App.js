@@ -16,16 +16,16 @@ function App() {
         <h4>ReactBlog</h4>
       </div>
       <button onClick={()=>{ 
-        let sort = [...글제목];
-        sort.sort();
-        글제목변경(sort);
+        let abc = [...글제목];
+        abc.sort();
+        글제목변경(abc);
        }}>가나다순정렬</button>
 
       <button onClick={() => {
         let copy = [...글제목];
         copy[0] = '남자 코트 추천';
         글제목변경(copy);
-      }}>button</button>
+      }}>글수정</button>
 
       <div className='list'>
         <h4>{글제목[0]} <span onClick={() => { 따봉변경(따봉 + 1) }}>👍</span> {따봉} </h4>
@@ -39,6 +39,12 @@ function App() {
       <div className='list'>
         <h4>{글제목[2]}</h4>
         <p>2월 15일 발행</p>
+      </div>
+
+      <div className='modal'>
+        <h4>제목</h4>
+        <p>날짜</p>
+        <p>상세내용</p>
       </div>
     </div>
   );
