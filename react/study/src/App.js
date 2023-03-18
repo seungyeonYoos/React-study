@@ -9,10 +9,6 @@ function App() {
   let [글제목, 글제목변경] = useState(['여자 코트 추천', '강남 우동 맛집', '파이썬독학']);
   let [따봉, 따봉변경] = useState([0, 0, 0]);
   let [modal, setModal] = useState(['닫힘','닫힘','닫힘']);
-  let [modal1, setModal1] =  useState(['닫힘','닫힘','닫힘']);
-
-
-  
 
   return (
     <div className="App">
@@ -38,10 +34,12 @@ function App() {
             let copy = [...modal];
             // setModal(copy);
             console.log(copy);
+            e.target.id == 0 ? setModal() : 
             setModal == '열림' ? console.log('gg') : console.log('dd')
             setModal(copy);
             // e.target.id == '열림' ? setModal('닫힘'): setModal('열림')
             // modal == '열림' ? setModal('닫힘'): setModal('열림')
+            // 지금 누른게 e.target.id 가 0 이면 madal의 0번째 array 열림 1이면 1번째 array 열림 2면 2번째 array 열림
         }}>{글제목[i]}  
         <span onClick={()=>{
           let copy = [...따봉];
