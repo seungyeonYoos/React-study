@@ -37,7 +37,7 @@ function App() {
             e.target.id == 0 ? setModal() : 
             setModal == '열림' ? console.log('gg') : console.log('dd')
             setModal(copy);
-            // e.target.id == '열림' ? setModal('열림'): setModal('열림')
+            // e.target.id == '열림' ? setModal('닫힘'): setModal('열림')
             // modal == '열림' ? setModal('닫힘'): setModal('열림')
             // 지금 누른게 e.target.id 가 0 이면 madal의 0번째 array 열림 1이면 1번째 array 열림 2면 2번째 array 열림
         }}>{글제목[i]}  
