@@ -14,7 +14,7 @@ function App() {
         <h4>ReactBlog</h4>
       </div>  
 
-      <button>가나다순 정렬</button>   
+      <button>ㄱㄴㄷ순 정렬</button>   
       <button>수정</button>
       {title.map(function(a, i){
         return (
