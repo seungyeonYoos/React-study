@@ -24,7 +24,7 @@ function App() {
               let copy = [...heart];
               copy[i] = copy[i] + 2;
               setHeart(copy);
-            }}>❤️</span> {heart[i]}
+            }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
           </div>
           
