@@ -8,6 +8,7 @@ function App() {
 
   let [title, setTitle] = useState(['안산 맛집 추천','강남 술집 추천','봄 코디 추천']);
   let [heart, setHeart] = useState([0,0,0]);
+  let [입력값, 입력값변경] = useState('');
   return (
     <div className="App">
       <div className="black-nav">
@@ -26,17 +27,21 @@ function App() {
               setHeart(copy);
             }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
+            <button onClick={()=>{
+              
+            }}>삭제</button>
           </div>
         )
       })}
-      <div>
-        <h3>{title[0]}</h3>
-        <p>상세내용</p>
-        <p>발행일</p>
-      </div>
-      <input type="text" onChange={()=>{
-        console.log("1");
+      <input type="text" onChange={(e)=>{
+        입력값변경(e.target.value);
       }}/>
+      <button onClick={()=>{
+        let copy = [...title, 입력값];
+        setTitle(copy);
+        let copyHeart = [...heart, 0];
+        setHeart(copyHeart);
+      }}>발행</button>
 
     </div>
   );
