@@ -22,7 +22,7 @@ function App() {
             <h3 onClick={function(){}}>{title[i]}</h3> 
             <span onClick={function(){
               let copy = [...heart];
-              copy[i] = copy[i] + 2;
+              copy[i] = copy[i] + 1;
               setHeart(copy);
             }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
