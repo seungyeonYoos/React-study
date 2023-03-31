@@ -28,7 +28,8 @@ function App() {
             }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
             <button onClick={()=>{
-              
+              console.log(i);
+              let copy = [...title]
             }}>삭제</button>
           </div>
         )
