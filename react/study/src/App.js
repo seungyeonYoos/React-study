@@ -27,9 +27,11 @@ function App() {
               setHeart(copy);
             }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
-            <button onClick={()=>{
-              console.log(i);
+            <button onClick={(e)=>{
               let copy = [...title]
+              copy.splice(i, 1)
+              console.log(copy);
+              setTitle(copy);
             }}>삭제</button>
           </div>
         )
