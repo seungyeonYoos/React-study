@@ -27,7 +27,6 @@ function App() {
             }}>🤍</span> {heart[i]}
             <p>발행 2월 15일</p>
           </div>
-          
         )
       })}
       <div>
@@ -35,6 +34,9 @@ function App() {
         <p>상세내용</p>
         <p>발행일</p>
       </div>
+      <input type="text" onChange={()=>{
+        console.log("1");
+      }}/>
 
     </div>
   );
