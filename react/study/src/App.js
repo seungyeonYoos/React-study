@@ -15,7 +15,7 @@ function App() {
         <h4>ReactBlog</h4>
       </div>  
 
-      <button>ㄱㄴㄷ순 정렬</button>   
+      <button>가나다순 정렬</button>   
       <button>수정</button>
       {title.map(function(a, i){
         return (
@@ -42,7 +42,7 @@ function App() {
       <button onClick={()=>{
         let copy = [...title, 입력값];
         setTitle(copy);
-        let copyHeart = [...heart, 0];
+        let copyHeart = [...heart, 1];
         setHeart(copyHeart);
       }}>발행</button>
 
